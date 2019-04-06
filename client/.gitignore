@@ -3,7 +3,6 @@ node_modules
 
 # build
 static/bundle.js
-build/
 
 # logs
 npm-debug.log
