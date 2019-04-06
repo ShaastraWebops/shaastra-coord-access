@@ -1,0 +1,85 @@
+.app {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: url(https://source.unsplash.com/featured/800x450/?technology)
+    center center no-repeat;
+  background-size: cover;
+}
+
+.light {
+  display: none;
+}
+
+.dark {
+  display: block;
+}
+
+.form-card {
+  width: 500px;
+  height: 80vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10vh 0;
+}
+
+.logo {
+  padding: 0 50px;
+  height: 25vh;
+}
+
+.select-wrapper {
+  width: calc(100% - 100px);
+  padding: 1vh 50px;
+  font-variant: small-caps;
+  font-family: "Montserrat";
+  text-transform: lowercase;
+  font-weight: 600;
+}
+
+.download-btn {
+  margin-top: 2vh !important;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  font-variant: small-caps;
+  font-family: "Montserrat";
+  text-transform: lowercase;
+  font-weight: 600;
+  height: 40px !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-card {
+    width: 80vw;
+    padding: 10vh 10vw;
+    background: #21212b77;
+  }
+
+  .dark {
+    display: none;
+  }
+
+  .light {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .form-card {
+    width: 100vw;
+    padding: 10vh 0;
+  }
+}
+
+.altLogo {
+  position: fixed;
+  width: 80px;
+  top: 5px;
+  left: 10px;
+}

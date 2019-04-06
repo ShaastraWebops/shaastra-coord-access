@@ -1,0 +1,31 @@
+{
+  "name": "shaastra-coord-access",
+  "version": "1.0.0",
+  "description": "Get your ADG3 on with this sample project using Atlaskit React components",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "Atlassian",
+  "license": "ISC",
+  "dependencies": {
+    "@atlaskit/banner": "^8.0.2",
+    "@atlaskit/button": "^9.0.7",
+    "@atlaskit/css-reset": "^3.0.1",
+    "@atlaskit/select": "^8.0.4",
+    "dropbox": "^4.0.17",
+    "isomorphic-fetch": "^2.2.1",
+    "mongodb-stitch-browser-sdk": "^4.3.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.2.4",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "react-scripts": "^1.1.1",
+    "surge": "^0.20.1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "shaastra-coord",
+  "version": "1.0.0",
+  "description": "WebApp to download and submit Shaastra coord apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
