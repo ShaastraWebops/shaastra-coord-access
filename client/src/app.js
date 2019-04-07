@@ -20,13 +20,13 @@ const deptData = [
   { label: "Finance", value: "finance" },
   { label: "Shows & Exhibitions", value: "sne" },
   { label: "Sponsorship & PR", value: "spons" },
+  { label: "Concept & Design", value: "cnd" },
+  { label: "WebOps", value: "webops" },
   { label: "Evolve", value: "evolve" },
   { label: "Events & Workshops", value: "events" },
   { label: "Operations & Infrastructure Planning", value: "onip" },
-  { label: "Concept & Design", value: "cnd" },
   { label: "Publicity", value: "publicity" },
-  { label: "Envisage", value: "envisage" },
-  { label: "WebOps", value: "webops" }
+  { label: "Envisage", value: "envisage" }
 ];
 
 let appData = {
