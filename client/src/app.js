@@ -41,17 +41,18 @@ let appData = {
     { label: "Coordinator", value: "coord" },
     { label: "Manager", value: "manager" }
   ],
-  onip: [
-    { label: "Coordinator", value: "coord" },
-    { label: "Catering Head", value: "catering_head" },
-    { label: "Operations Head", value: "operations_head" },
-    { label: "Hospitality Head", value: "hospitality_head" }
-  ],
   cnd: [
     { label: "Creative Branding & Design Coordinator", value: "design_coord" },
     { label: "Creative Ambience Coordinator", value: "ambience_coord" },
     { label: "Video Editing & VFX Coordinator", value: "vfx_coord" },
     { label: "Media Coordinator", value: "media_coord" }
+  ],
+  webops: [{ label: "Full Stack Coordinator", value: "coord" }],
+  onip: [
+    { label: "Coordinator", value: "coord" },
+    { label: "Catering Head", value: "catering_head" },
+    { label: "Operations Head", value: "operations_head" },
+    { label: "Hospitality Head", value: "hospitality_head" }
   ],
   spons: [
     { label: "Engage & Endeavour Coordinator", value: "engage_endeavour_coord" }
@@ -65,8 +66,7 @@ let appData = {
     { label: "Tech & Policy Head", value: "tnp_head" }
   ],
   publicity: [{ label: "Coordinator", value: "coord" }],
-  events: [{ label: "Events & Workshops Coordinator", value: "coord" }],
-  webops: [{ label: "Full Stack Coordinator", value: "coord" }]
+  events: [{ label: "Events & Workshops Coordinator", value: "coord" }]
 };
 
 class App extends React.Component {
