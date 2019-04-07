@@ -36,7 +36,19 @@ let appData = {
     { label: "Exhibitions Coordinator", value: "exhibitions_coord" },
     { label: "TechCreation Coordinator", value: "techcreation_coord" },
     { label: "Tech & Innovation Fair Coordinator", value: "tif_coord" }
-  ]
+  ],
+  envisage: [{ label: "Coordinator", value: "coord" }],
+  finance: [
+    { label: "Coordinator", value: "coord" },
+    { label: "Manager", value: "manager" }
+  ],
+  onip: [
+    { label: "Coordinator", value: "coord" },
+    { label: "Catering Head", value: "catering_head" },
+    { label: "Operations Head", value: "operations_head" },
+    { label: "Hospitality Head", value: "hospitality_head" }
+  ],
+  publicity: [{ label: "Coordinator", value: "coord" }]
 };
 
 class App extends React.Component {
@@ -97,11 +109,7 @@ class App extends React.Component {
               onChange={({ value }) => {
                 this.onChangeHandler("position", value);
               }}
-              options={
-                appData[this.state.department] || [
-                  { label: "Coordinator", value: "coord" }
-                ]
-              }
+              options={appData[this.state.department]}
               placeholder="Choose a Position"
             />
             <a
@@ -118,6 +126,8 @@ class App extends React.Component {
               type="button"
               onClick={() => {
                 document.getElementById("link").click();
+                this.onChangeHandler("department", "");
+                this.onChangeHandler("position", "");
                 this.setState(initialState);
               }}
             >
