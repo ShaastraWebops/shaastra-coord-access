@@ -25,7 +25,6 @@ const deptData = [
   { label: "Operations & Infrastructure Planning", value: "onip" },
   { label: "Concept & Design", value: "cnd" },
   { label: "Publicity", value: "publicity" },
-  { label: "QMS", value: "qms" },
   { label: "Envisage", value: "envisage" },
   { label: "WebOps", value: "webops" }
 ];
@@ -48,7 +47,26 @@ let appData = {
     { label: "Operations Head", value: "operations_head" },
     { label: "Hospitality Head", value: "hospitality_head" }
   ],
-  publicity: [{ label: "Coordinator", value: "coord" }]
+  cnd: [
+    { label: "Creative Branding & Design Coordinator", value: "design_coord" },
+    { label: "Creative Ambience Coordinator", value: "ambience_coord" },
+    { label: "Video Editing & VFX Coordinator", value: "vfx_coord" },
+    { label: "Media Coordinator", value: "media_coord" }
+  ],
+  spons: [
+    { label: "Engage & Endeavour Coordinator", value: "engage_endeavour_coord" }
+  ],
+  evolve: [
+    { label: "Spotlight Coordinator", value: "spotlight_coord" },
+    { label: "Summit Coordinator", value: "summit_coord" },
+    { label: "Tech & Policy Coordinator", value: "tnp_coord" },
+    { label: "Spotlight Head", value: "spotlight_head" },
+    { label: "Summit Head", value: "summit_head" },
+    { label: "Tech & Policy Head", value: "tnp_head" }
+  ],
+  publicity: [{ label: "Coordinator", value: "coord" }],
+  events: [{ label: "Events & Workshops Coordinator", value: "coord" }],
+  webops: [{ label: "Full Stack Coordinator", value: "coord" }]
 };
 
 class App extends React.Component {
