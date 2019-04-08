@@ -6,6 +6,7 @@ import InlineDialog from "@atlaskit/inline-dialog";
 import TextField from "@atlaskit/textfield";
 import { dbx } from "../utils/dbx";
 import { initialState, deptData, appData } from "../utils/data";
+import { Link } from "react-router-dom";
 
 class UploadApp extends React.Component {
   state = initialState;
@@ -61,6 +62,11 @@ class UploadApp extends React.Component {
     return (
       <div className="select-wrapper">
         <br />
+        <Link to="/">
+          <Button appearance="subtle" className="back-btn">
+            go back
+          </Button>
+        </Link>
         <Select
           className="single-select"
           classNamePrefix="react-select"

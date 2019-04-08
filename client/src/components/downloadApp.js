@@ -3,6 +3,7 @@ import Select from "@atlaskit/select";
 import Button from "@atlaskit/button";
 import Banner from "@atlaskit/banner";
 import { dbx } from "../utils/dbx";
+import { Link } from "react-router-dom";
 import { initialState, deptData, appData } from "../utils/data";
 
 class DownloadApp extends React.Component {
@@ -38,6 +39,12 @@ class DownloadApp extends React.Component {
   render() {
     return (
       <div className="select-wrapper">
+        <br />
+        <Link to="/">
+          <Button appearance="subtle" className="back-btn">
+            go back
+          </Button>
+        </Link>
         <Select
           className="single-select"
           classNamePrefix="react-select"

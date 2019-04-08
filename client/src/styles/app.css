@@ -5,7 +5,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: url(https://source.unsplash.com/featured/800x450/?technology) center center no-repeat;
+  background: url('../images/bg.jpg') center center no-repeat;
   background-size: cover;
 }
 
@@ -94,4 +94,14 @@
   width: 80px;
   top: 5px;
   left: 10px;
+}
+
+.back-btn {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-variant: small-caps;
+  font-family: "Montserrat";
+  text-transform: lowercase;
+  font-weight: 600;
 }
