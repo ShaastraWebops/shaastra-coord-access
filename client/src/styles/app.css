@@ -5,8 +5,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: url(https://source.unsplash.com/featured/800x450/?technology)
-    center center no-repeat;
+  background: url(https://source.unsplash.com/featured/800x450/?technology) center center no-repeat;
   background-size: cover;
 }
 
@@ -25,6 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   padding: 10vh 0;
 }
 
@@ -40,6 +40,7 @@
   font-family: "Montserrat";
   text-transform: lowercase;
   font-weight: 600;
+  max-width: 450px;
 }
 
 .download-btn {
@@ -52,6 +53,13 @@
   text-transform: lowercase;
   font-weight: 600;
   height: 40px !important;
+}
+
+.upload-text {
+  font-variant: small-caps !important;
+  font-family: "Montserrat";
+  text-transform: lowercase;
+  font-weight: 600 !important;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -74,6 +82,10 @@
   .form-card {
     width: 100vw;
     padding: 10vh 0;
+  }
+
+  .altLogo {
+    display: none;
   }
 }
 
