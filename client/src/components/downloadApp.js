@@ -6,13 +6,9 @@ import { dbx } from "../utils/dbx";
 import { initialState, deptData, appData } from "../utils/data";
 
 class DownloadApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = initialState;
-    this.onChangeHandler = this.onChangeHandler.bind(this);
-  }
+  state = initialState;
 
-  onChangeHandler(field, value) {
+  onChangeHandler = (field, value) => {
     const { state } = this;
     state[field] = value;
     if (state.department && state.position) {
@@ -37,7 +33,7 @@ class DownloadApp extends React.Component {
     } else {
       this.setState(state);
     }
-  }
+  };
 
   render() {
     return (

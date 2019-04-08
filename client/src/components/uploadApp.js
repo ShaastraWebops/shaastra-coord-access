@@ -8,27 +8,13 @@ import { dbx } from "../utils/dbx";
 import { initialState, deptData, appData } from "../utils/data";
 
 class UploadApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ...initialState,
-      name: "",
-      rollno: "",
-      application: null,
-      secretKey: "",
-      dialogOpen: false,
-      successMsg: ""
-    };
-    this.onChangeHandler = this.onChangeHandler.bind(this);
-    this.uploadFile = this.uploadFile.bind(this);
-    this.onChangeHandlerTextField = this.onChangeHandlerTextField.bind(this);
-  }
+  state = initialState;
 
-  onChangeHandler(field, value) {
+  onChangeHandler = (field, value) => {
     const { state } = this;
     state[field] = value;
     this.setState(state);
-  }
+  };
 
   onChangeHandlerTextField = e => {
     e.persist();
@@ -37,7 +23,7 @@ class UploadApp extends React.Component {
     }));
   };
 
-  uploadFile() {
+  uploadFile = () => {
     const SIZE_LIMIT = 100 * 1024 * 1024;
     if (this.state.application.size < SIZE_LIMIT) {
       const extension = this.state.application.name.split(".").pop();
@@ -58,20 +44,18 @@ class UploadApp extends React.Component {
         })
         .then(response => {
           this.setState(() => ({
-            isLoading: false,
-            successMsg: "App Submitted",
-            error: ""
+            ...initialState,
+            successMsg: "App Submitted"
           }));
         })
         .catch(err => {
           this.setState(() => ({
-            error: "Error Uploading App",
-            isLoading: false,
-            successMsg: ""
+            ...initialState,
+            error: "Error Uploading App"
           }));
         });
     }
-  }
+  };
 
   render() {
     return (
@@ -175,7 +159,7 @@ class UploadApp extends React.Component {
         <Banner appearance="error" isOpen={this.state.error}>
           Sorry, {this.state.error}
         </Banner>
-        <Banner appearance="announcement" isOpen={!this.state.successMsg}>
+        <Banner appearance="announcement" isOpen={this.state.successMsg}>
           {this.state.successMsg}
           <br />
         </Banner>

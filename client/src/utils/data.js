@@ -2,7 +2,14 @@ const initialState = {
   isLoading: false,
   department: "",
   position: "",
-  applink: ""
+  applink: "",
+  name: "",
+  rollno: "",
+  application: null,
+  secretKey: "",
+  dialogOpen: false,
+  successMsg: "",
+  error: ""
 };
 
 const deptData = [
