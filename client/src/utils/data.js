@@ -38,6 +38,16 @@ let appData = {
     { label: "Manager", value: "manager" }
   ],
   cnd: [
+    {
+      label: "Creative Branding & Design Super Coordinator",
+      value: "design_supercoord"
+    },
+    {
+      label: "Creative Ambience Super Coordinator",
+      value: "ambience_supercoord"
+    },
+    { label: "Video Editing & VFX Super Coordinator", value: "vfx_supercoord" },
+    { label: "Media Super Coordinator", value: "media_supercoord" },
     { label: "Creative Branding & Design Coordinator", value: "design_coord" },
     { label: "Creative Ambience Coordinator", value: "ambience_coord" },
     { label: "Video Editing & VFX Coordinator", value: "vfx_coord" },
