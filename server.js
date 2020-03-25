@@ -9,6 +9,6 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("App running on port: ", process.env.PORT);
+app.listen(8000, () => {
+  console.log("App running on port: ", 8000);
 });

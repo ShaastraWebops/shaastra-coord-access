@@ -5,7 +5,12 @@ import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <div className="select-wrapper">
-      <Link to="/download">
+      <Link to="/fundaeBooks">
+        <Button appearance="danger" className="download-btn" type="button">
+          Download Fundae Books
+        </Button>
+      </Link>
+      <Link to="/downloadApp">
         <Button appearance="primary" className="download-btn" type="button">
           Download App
         </Button>

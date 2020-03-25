@@ -35,11 +35,7 @@ class UploadApp extends React.Component {
       this.setState(() => ({ isLoading: true }));
       dbx
         .filesUpload({
-          path: `/submitted/${this.state.department}/${
-            this.state.position
-          }/${modifiedName}_${this.state.rollno}_${
-            this.state.secretKey
-          }.${extension}`,
+          path: `/submitted/${this.state.department}/${this.state.position}/${modifiedName}_${this.state.rollno}_${this.state.secretKey}.${extension}`,
           contents: this.state.application,
           mode: "overwrite"
         })
