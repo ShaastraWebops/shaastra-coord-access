@@ -78,7 +78,7 @@ let appData = {
       label: "Engage & Endeavour Coordinator",
       value: "engage_endeavour_coord"
     },
-    { label: "Corporate Relations", value: "corporate_relations.pdf" },
+    { label: "Corporate Relations", value: "corporate_relations" },
     { label: "Public Relations Executive", value: "pr_executive" }
   ],
   evolve: [
