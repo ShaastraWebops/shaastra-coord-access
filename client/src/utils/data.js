@@ -71,7 +71,10 @@ let appData = {
     { label: "Summit Head", value: "summit_head" },
     { label: "Tech & Policy Head", value: "tnp_head" }
   ],
-  publicity: [{ label: "Coordinator", value: "coord" }],
+  publicity: [
+    { label: "Coordinator", value: "coord" },
+    { label: "Strategist", value: "strategist" }
+  ],
   events: [{ label: "Events & Workshops Coordinator", value: "coord" }]
 };
 
