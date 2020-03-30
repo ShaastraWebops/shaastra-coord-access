@@ -28,7 +28,7 @@ class DownloadFundaes extends React.Component {
         .catch(() => {
           state.isLoading = false;
           state.applink = "";
-          state.error = "selected FundaeBook unavailable";
+          state.error = "selected GuideBook unavailable";
           this.setState(state);
         });
     } else {

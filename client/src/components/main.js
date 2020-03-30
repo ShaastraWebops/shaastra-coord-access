@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <div className="select-wrapper">
-      <Link to="/fundaeBooks">
+      <Link to="/guideBooks">
         <Button appearance="danger" className="download-btn" type="button">
-          Download Fundae Books
+          Download Guide Books
         </Button>
       </Link>
       <Link to="/downloadApp">

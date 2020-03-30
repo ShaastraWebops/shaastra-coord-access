@@ -22,8 +22,8 @@ const deptData = [
   { label: "Events & Workshops", value: "events" },
   { label: "Operations & Infrastructure Planning", value: "onip" },
   { label: "Publicity", value: "publicity" },
-  { label: "Envisage", value: "envisage" },
-  { lable: "Quality Management Services", value: "qms" }
+  { label: "Quality Management Services", value: "qms" },
+  { label: "Envisage", value: "envisage" }
 ];
 
 let appData = {

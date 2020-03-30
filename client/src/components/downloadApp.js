@@ -53,6 +53,7 @@ class DownloadApp extends React.Component {
           }}
           options={deptData}
           placeholder="Choose a Department"
+          style={{ color: "black" }}
         />
         <br />
         <Select
