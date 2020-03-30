@@ -17,7 +17,7 @@ class DownloadFundaes extends React.Component {
       this.setState(state);
       dbx
         .filesGetTemporaryLink({
-          path: `/fundaeBooks/${state.department}.pdf`
+          path: `/guideBooks/${state.department}_guidebook.pdf`
         })
         .then(data => {
           state.applink = data.link;

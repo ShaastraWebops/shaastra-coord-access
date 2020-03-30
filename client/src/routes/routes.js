@@ -10,7 +10,7 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" component={Main} exact />
-        <Route path="/fundaeBooks" component={DownloadFundaes} exact />
+        <Route path="/guideBooks" component={DownloadFundaes} exact />
         <Route path="/downloadApp" component={DownloadApp} exact />
         <Route path="/upload" component={UploadApp} exact />
       </Switch>
