@@ -69,9 +69,7 @@ let appData = {
   ],
   onip: [
     { label: "Coordinator", value: "coord" },
-    { label: "Catering Head", value: "catering_head" },
-    { label: "Operations Head", value: "operations_head" },
-    { label: "Hospitality Head", value: "hospitality_head" }
+    { label: "Head", value: "head" }
   ],
   spons: [
     {
