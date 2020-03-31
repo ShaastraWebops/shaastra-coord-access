@@ -63,6 +63,10 @@ class DownloadFundaes extends React.Component {
         >
           <br />
         </a>
+        <br />
+        <p style={{ color: "blue", position: "relative", left: "70px" }}>
+          Note: Events guideBook will be updated soon
+        </p>
         <Button
           isLoading={this.state.isLoading}
           appearance="primary"
