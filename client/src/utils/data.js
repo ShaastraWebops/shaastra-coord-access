@@ -19,7 +19,7 @@ const deptData = [
   { label: "Concept & Design", value: "cnd" },
   { label: "WebOps", value: "webops" },
   { label: "Evolve", value: "evolve" },
-  { label: "Events & Workshops", value: "events" },
+  // { label: "Events & Workshops", value: "events" },
   { label: "Operations & Infrastructure Planning", value: "onip" },
   { label: "Publicity", value: "publicity" },
   { label: "Quality Management Services", value: "qms" },
@@ -61,9 +61,9 @@ let appData = {
     { label: "Super Coordinator", value: "supercoord" }
   ],
   webops: [
-    { label: "Full Stack Coordinator", value: "coord" },
+    { label: "Coordinator", value: "coord" },
     {
-      label: "Full Stack SuperCoord",
+      label: "Super Coordinator",
       value: "supercoord"
     }
   ],
@@ -91,7 +91,7 @@ let appData = {
     { label: "Coordinator", value: "coord" },
     { label: "Strategist", value: "strategist" }
   ],
-  events: [{ label: "Events & Workshops Coordinator", value: "coord" }],
+  // events: [{ label: "Events & Workshops Coordinator", value: "coord" }],
   qms: [
     { label: "Manager", value: "manager" },
     { label: "Assistant Managere", value: "assistant_manager" }
