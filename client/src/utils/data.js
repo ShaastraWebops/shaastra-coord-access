@@ -9,7 +9,7 @@ const initialState = {
   secretKey: "",
   dialogOpen: false,
   successMsg: "",
-  error: ""
+  error: "",
 };
 
 const deptData = [
@@ -19,11 +19,11 @@ const deptData = [
   { label: "Concept & Design", value: "cnd" },
   { label: "WebOps", value: "webops" },
   { label: "Evolve", value: "evolve" },
-  // { label: "Events & Workshops", value: "events" },
+  { label: "Events & Workshops", value: "events" },
   { label: "Operations & Infrastructure Planning", value: "onip" },
   { label: "Publicity", value: "publicity" },
   { label: "Quality Management Services", value: "qms" },
-  { label: "Envisage", value: "envisage" }
+  { label: "Envisage", value: "envisage" },
 ];
 
 let appData = {
@@ -35,12 +35,12 @@ let appData = {
     { label: "TechCreation Head", value: "techcreation_head" },
     { label: "Shows Head", value: "shows_head" },
     { label: "Exhibitions Head", value: "exhibitions_head" },
-    { label: "Tech & Innovation Fair Head", value: "tif_head" }
+    { label: "Tech & Innovation Fair Head", value: "tif_head" },
   ],
   envisage: [{ label: "Coordinator", value: "coord" }],
   finance: [
     { label: "Coordinator", value: "coord" },
-    { label: "Manager", value: "manager" }
+    { label: "Manager", value: "manager" },
   ],
   cnd: [
     // {
@@ -58,26 +58,26 @@ let appData = {
     // { label: "Video Editing & VFX Coordinator", value: "vfx_coord" },
     // { label: "Media Coordinator", value: "media_coord" }
     { label: "Coordinator", value: "coord" },
-    { label: "Super Coordinator", value: "supercoord" }
+    { label: "Super Coordinator", value: "supercoord" },
   ],
   webops: [
     { label: "Coordinator", value: "coord" },
     {
       label: "Super Coordinator",
-      value: "supercoord"
-    }
+      value: "supercoord",
+    },
   ],
   onip: [
     { label: "Coordinator", value: "coord" },
-    { label: "Head", value: "head" }
+    { label: "Head", value: "head" },
   ],
   spons: [
     {
       label: "Engage & Endeavour Coordinator",
-      value: "engage_endeavour_coord"
+      value: "engage_endeavour_coord",
     },
     { label: "Corporate Relations", value: "corporate_relations" },
-    { label: "Public Relations Executive", value: "pr_executive" }
+    { label: "Public Relations Executive", value: "pr_executive" },
   ],
   evolve: [
     { label: "Spotlight Coordinator", value: "spotlight_coord" },
@@ -85,17 +85,26 @@ let appData = {
     { label: "UpSkill Coordinator", value: "upSkill_coord" },
     { label: "Spotlight Head", value: "spotlight_head" },
     { label: "Summit Head", value: "summit_head" },
-    { label: "UpSkill Head", value: "upSkill_head" }
+    { label: "UpSkill Head", value: "upSkill_head" },
   ],
   publicity: [
     { label: "Coordinator", value: "coord" },
-    { label: "Strategist", value: "strategist" }
+    { label: "Strategist", value: "strategist" },
   ],
-  // events: [{ label: "Events & Workshops Coordinator", value: "coord" }],
+  events: [
+    { label: "B Events Head", value: "bEvents_head" },
+    { label: "Aerofest Head", value: "aerofest_head" },
+    { label: "Workshops Head", value: "workshops_head" },
+    { label: "Coding and Logic Head", value: "CandL_head" },
+    { label: "Moot Court Head", value: "moot_court_head" },
+    { label: "Elecfest Head", value: "elecfest_head" },
+    { label: "Involve and Quizzing Head", value: "IandQ_head" },
+    { label: "Design and Build Head", value: "DandB_head" },
+  ],
   qms: [
     { label: "Manager", value: "manager" },
-    { label: "Assistant Managere", value: "assistant_manager" }
-  ]
+    { label: "Assistant Managere", value: "assistant_manager" },
+  ],
 };
 
 export { initialState, appData, deptData };

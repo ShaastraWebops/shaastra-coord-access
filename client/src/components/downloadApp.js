@@ -74,10 +74,6 @@ class DownloadApp extends React.Component {
           <br />
         </a>
         <br />
-        <p style={{ color: "blue", position: "relative", left: "90px" }}>
-          Note: Events app will be updated soon
-        </p>
-        <br />
         <Button
           isLoading={this.state.isLoading}
           appearance="primary"
