@@ -42,7 +42,7 @@ class DownloadApp extends React.Component {
         <br />
         <Link to="/">
           <Button appearance="subtle" className="back-btn">
-            go back
+            {`<`}
           </Button>
         </Link>
         <Select
@@ -74,7 +74,7 @@ class DownloadApp extends React.Component {
           <br />
         </a>
         <br />
-        <Button
+        {!(this.state.applink === "") && <Button
           isLoading={this.state.isLoading}
           appearance="primary"
           isDisabled={!this.state.applink}
@@ -88,7 +88,7 @@ class DownloadApp extends React.Component {
           }}
         >
           Download
-        </Button>
+        </Button>}
         <br />
         <br />
         <Banner appearance="error" isOpen={this.state.error}>

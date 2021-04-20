@@ -7,6 +7,7 @@ import TextField from "@atlaskit/textfield";
 import { dbx } from "../utils/dbx";
 import { initialState, deptData, appData } from "../utils/data";
 import { Link } from "react-router-dom";
+import { ArrowBack } from "@material-ui/icons";
 
 class UploadApp extends React.Component {
   state = initialState;
@@ -56,117 +57,118 @@ class UploadApp extends React.Component {
 
   render() {
     return (
-      <div className="select-wrapper">
-        <br />
-        <Link to="/dash">Hello</Link>
-        <Link to="/">
-          <Button appearance="subtle" className="back-btn">
-            go back
-          </Button>
-        </Link>
-        <Select
-          className="single-select"
-          classNamePrefix="react-select"
-          onChange={({ value }) => {
-            this.onChangeHandler("department", value);
-          }}
-          options={deptData}
-          placeholder="Choose a Department"
-        />
-        <br />
-        <Select
-          className="single-select"
-          classNamePrefix="react-select"
-          onChange={({ value }) => {
-            this.onChangeHandler("position", value);
-          }}
-          options={appData[this.state.department]}
-          placeholder="Choose a Position"
-        />
-        <br />
-        <TextField
-          name="name"
-          placeholder="Enter full name"
-          className="upload-text"
-          value={this.state.name}
-          onChange={this.onChangeHandlerTextField}
-        />
-        <br />
-        <TextField
-          name="rollno"
-          placeholder="Enter roll number"
-          className="upload-text"
-          value={this.state.rollno}
-          onChange={this.onChangeHandlerTextField}
-        />
-        <br />
-        <InlineDialog
-          content="Create your own secret key that you can use to edit submission in
-          future. Please remember it."
-          isOpen={this.state.dialogOpen}
-          placement="top"
-        >
-          <TextField
-            name="secretKey"
-            placeholder="Enter 6 Digit Secret Key"
-            className="upload-text"
-            type="password"
-            onChange={this.onChangeHandlerTextField}
-            maxLength={6}
-            onFocus={() => {
-              this.setState(() => ({
-                dialogOpen: true
-              }));
+      <React.Fragment>
+        <div className="select-wrapper">
+          <Link to="/">
+            <Button appearance="subtle" className="back-btn">
+              {`<`}
+            </Button>
+          </Link>
+          <Select
+            className="single-select"
+            classNamePrefix="react-select"
+            onChange={({ value }) => {
+              this.onChangeHandler("department", value);
             }}
-            onBlur={() => {
-              this.setState(() => ({
-                dialogOpen: false
-              }));
+            options={deptData}
+            placeholder="Choose a Department"
+          />
+          <br />
+          <Select
+            className="single-select"
+            classNamePrefix="react-select"
+            onChange={({ value }) => {
+              this.onChangeHandler("position", value);
+            }}
+            options={appData[this.state.department]}
+            placeholder="Choose a Position"
+          />
+          <br />
+          <TextField
+            name="name"
+            placeholder="Enter full name"
+            className="upload-text"
+            value={this.state.name}
+            onChange={this.onChangeHandlerTextField}
+          />
+          <br />
+          <TextField
+            name="rollno"
+            placeholder="Enter roll number"
+            className="upload-text"
+            value={this.state.rollno}
+            onChange={this.onChangeHandlerTextField}
+          />
+          <br />
+          <InlineDialog
+            content="Create your own secret key that you can use to edit submission in
+          future. Please remember it."
+            isOpen={this.state.dialogOpen}
+            placement="top"
+          >
+            <TextField
+              name="secretKey"
+              placeholder="Enter 6 Digit Secret Key"
+              className="upload-text"
+              type="password"
+              onChange={this.onChangeHandlerTextField}
+              maxLength={6}
+              onFocus={() => {
+                this.setState(() => ({
+                  dialogOpen: true
+                }));
+              }}
+              onBlur={() => {
+                this.setState(() => ({
+                  dialogOpen: false
+                }));
+              }}
+            />
+          </InlineDialog>
+          <br />
+          <TextField
+            className="upload-file"
+            id="file-upload"
+            type="file"
+            id="submitApp"
+            onChange={e => {
+              this.setState({
+                application: e.target.files[0]
+              });
             }}
           />
-        </InlineDialog>
-        <br />
-        <TextField
-          className="upload-text"
-          type="file"
-          id="submitApp"
-          onChange={e => {
-            this.setState({
-              application: e.target.files[0]
-            });
-          }}
-        />
 
-        <br />
-        <Button
-          isLoading={this.state.isLoading}
-          appearance="primary"
-          isDisabled={
-            !this.state.department ||
-            !this.state.name ||
-            !this.state.position ||
-            !this.state.application ||
-            !this.state.rollno ||
-            !this.state.secretKey
-          }
-          className="download-btn"
-          type="button"
-          onClick={() => {
-            this.uploadFile();
-          }}
-        >
-          Submit
-        </Button>
-        <br />
-        <br />
-        <Banner appearance="error" isOpen={this.state.error}>
-        &nbsp;{this.state.error}&nbsp;
-        </Banner>
-        <Banner appearance="announcement" isOpen={this.state.successMsg}>
-          {this.state.successMsg}
           <br />
-        </Banner>
-      </div>
+          <Button
+            isLoading={this.state.isLoading}
+            appearance="primary"
+            isDisabled={
+              !this.state.department ||
+              !this.state.name ||
+              !this.state.position ||
+              !this.state.application ||
+              !this.state.rollno ||
+              !this.state.secretKey
+            }
+            className="download-btn"
+            type="button"
+            onClick={() => {
+              this.uploadFile();
+            }}
+          >
+            Submit
+          </Button>
+          <br />
+          <br />
+          <Banner appearance="error" isOpen={this.state.error}>
+            &nbsp;{this.state.error}&nbsp;
+          </Banner>
+          <Banner appearance="announcement" isOpen={this.state.successMsg}>
+            {this.state.successMsg}
+            <br />
+          </Banner>
+        </div>
+      </React.Fragment>
     );
   }
 }

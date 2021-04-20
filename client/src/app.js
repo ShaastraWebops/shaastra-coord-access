@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="form-card">
-        <img src={logoDark} alt="Shaastra 2020" className="logo dark" />
+        <img src={logoLight} alt="Shaastra 2020" className="logo dark" />
         <AppRoutes />
       </div>
     </div>

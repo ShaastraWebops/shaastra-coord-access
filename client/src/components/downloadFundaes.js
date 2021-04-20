@@ -42,7 +42,7 @@ class DownloadFundaes extends React.Component {
         <br />
         <Link to="/">
           <Button appearance="subtle" className="back-btn">
-            go back
+            {`<`}
           </Button>
         </Link>
         <Select
@@ -64,10 +64,10 @@ class DownloadFundaes extends React.Component {
           <br />
         </a>
         <br />
-        <p style={{ color: "blue", position: "relative"}}>
+        <p className="note" >
           Note: Events guideBook will be updated soon
         </p>
-        <Button
+        {!(this.state.applink === "") &&  <Button
           isLoading={this.state.isLoading}
           appearance="primary"
           isDisabled={!this.state.applink}
@@ -80,11 +80,11 @@ class DownloadFundaes extends React.Component {
           }}
         >
           Download
-        </Button>
+        </Button>}
         <br />
         <br />
         <Banner className="error-banner" appearance="error" isOpen={this.state.error}>
-         &nbsp; {this.state.error} &nbsp;
+          &nbsp;{this.state.error} &nbsp;
         </Banner>
       </div>
     );

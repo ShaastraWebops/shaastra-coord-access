@@ -1,3 +1,8 @@
+html, body{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -5,6 +10,8 @@
   align-items: center;
   min-height: 100vh;
   background-color: #282242;
+  background-image: url('./../images/bg.jpg');
+  background-size: cover;
   box-sizing: border-box;
 }
 
@@ -16,16 +23,16 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  flex: 0.4;
-  max-width: 30%;
+  /* flex: 0.3; */
+  max-width: 450px;
 }
 
 .form-card {
   width: 100%;
   /* max-width: 450px; */
-  background: #fff;
+  background: #00000080;
   display: flex;
-  flex: 0.6;
+  flex: 1;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -38,17 +45,20 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  /* padding: 1 50px; */
-  font-variant: small-caps;
-  font-family: "Montserrat";
-  text-transform: lowercase;
+  flex: 0.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   max-width: 450px;
+  text-transform: uppercase;
   box-sizing: border-box;
 }
 
+.select-wrapper button{
+  margin-bottom: 20px !important;
+}
+
 .select-wrapper > div{
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .download-btn {
@@ -59,7 +69,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   text-transform: uppercase;
   font-weight: 1000;
-  padding: 30px 0 !important;
+  padding: 27px 0 !important;
   /* height: 40px !important; */
 }
 
@@ -76,19 +86,56 @@
 }
 
 .upload-text {
-  font-variant: small-caps !important;
-  font-family: "Montserrat";
-  text-transform: lowercase;
-  font-weight: 600 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 18px 0 !important;
+  padding-left: 10px !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  box-sizing: border-box;
 }
+
+.upload-file {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 14px;
+  border-radius: 8px;
+  /* padding: 18px !important; */
+  text-transform: uppercase;
+  font-weight: 600;
+  /* box-sizing: border-box; */
+}
+
 
 .error-display{
   padding: 20px !important;
 }
 
+.single-select{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* .single-select > div{
+  padding: 20px 0 !important;
+
+} */
+
+.note{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
 @media only screen and (max-width: 1000px) {
   .light {
     display: block;
+  }
+
+  .form-card{
+    flex-direction: column;
   }
 }
 
@@ -120,12 +167,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  margin: 10px !important;
-  font-variant: small-caps;
-  font-family: "Montserrat";
-  text-transform: lowercase;
-  font-weight: 600;
-  background-color: #36a9d6 !important;
-  color: #fff !important;
+  margin: 20px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-weight: 1000;
+  text-transform: uppercase;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 30px !important;
+  z-index: 3;
 }
 
