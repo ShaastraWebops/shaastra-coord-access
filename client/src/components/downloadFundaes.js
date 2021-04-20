@@ -64,7 +64,7 @@ class DownloadFundaes extends React.Component {
           <br />
         </a>
         <br />
-        <p style={{ color: "blue", position: "relative", left: "70px" }}>
+        <p style={{ color: "blue", position: "relative"}}>
           Note: Events guideBook will be updated soon
         </p>
         <Button
@@ -83,8 +83,8 @@ class DownloadFundaes extends React.Component {
         </Button>
         <br />
         <br />
-        <Banner appearance="error" isOpen={this.state.error}>
-          Sorry, {this.state.error}
+        <Banner className="error-banner" appearance="error" isOpen={this.state.error}>
+         &nbsp; {this.state.error} &nbsp;
         </Banner>
       </div>
     );

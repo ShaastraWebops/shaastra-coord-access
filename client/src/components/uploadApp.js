@@ -58,6 +58,7 @@ class UploadApp extends React.Component {
     return (
       <div className="select-wrapper">
         <br />
+        <Link to="/dash">Hello</Link>
         <Link to="/">
           <Button appearance="subtle" className="back-btn">
             go back
@@ -159,7 +160,7 @@ class UploadApp extends React.Component {
         <br />
         <br />
         <Banner appearance="error" isOpen={this.state.error}>
-          Sorry, {this.state.error}
+        &nbsp;{this.state.error}&nbsp;
         </Banner>
         <Banner appearance="announcement" isOpen={this.state.successMsg}>
           {this.state.successMsg}

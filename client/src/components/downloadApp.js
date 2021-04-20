@@ -92,7 +92,7 @@ class DownloadApp extends React.Component {
         <br />
         <br />
         <Banner appearance="error" isOpen={this.state.error}>
-          Sorry, {this.state.error}
+          &nbsp; {this.state.error} &nbsp;
         </Banner>
         <br />
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@atlaskit/button";
 import { Link } from "react-router-dom";
 
-const Main = () => {
+const Menu = () => {
   return (
     <div className="select-wrapper">
       <Link to="/guideBooks">
@@ -25,4 +25,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Menu;
