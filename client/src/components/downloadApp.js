@@ -17,9 +17,9 @@ class DownloadApp extends React.Component {
       this.setState(state);
       dbx
         .filesGetTemporaryLink({
-          path: `/apps/${state.department}_${state.position}.pdf`
+          path: `/apps/${state.department}_${state.position}.pdf`,
         })
-        .then(data => {
+        .then((data) => {
           state.applink = data.link;
           state.isLoading = false;
           state.error = "";
@@ -40,11 +40,11 @@ class DownloadApp extends React.Component {
     return (
       <div className="select-wrapper">
         <br />
-        <Link to="/">
+        <a href="/">
           <Button appearance="subtle" className="back-btn">
             {`<`}
           </Button>
-        </Link>
+        </a>
         <Select
           className="single-select"
           classNamePrefix="react-select"
@@ -74,21 +74,23 @@ class DownloadApp extends React.Component {
           <br />
         </a>
         <br />
-        {!(this.state.applink === "") && <Button
-          isLoading={this.state.isLoading}
-          appearance="primary"
-          isDisabled={!this.state.applink}
-          className="download-btn"
-          type="button"
-          onClick={() => {
-            document.getElementById("link").click();
-            this.onChangeHandler("department", "");
-            this.onChangeHandler("position", "");
-            this.setState(initialState);
-          }}
-        >
-          Download
-        </Button>}
+        {!(this.state.applink === "") && (
+          <Button
+            isLoading={this.state.isLoading}
+            appearance="primary"
+            isDisabled={!this.state.applink}
+            className="download-btn"
+            type="button"
+            onClick={() => {
+              document.getElementById("link").click();
+              this.onChangeHandler("department", "");
+              this.onChangeHandler("position", "");
+              this.setState(initialState);
+            }}
+          >
+            Download
+          </Button>
+        )}
         <br />
         <br />
         <Banner appearance="error" isOpen={this.state.error}>

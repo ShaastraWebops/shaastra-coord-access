@@ -15,11 +15,12 @@ class DownloadFundaes extends React.Component {
     if (state.department) {
       state.isLoading = true;
       this.setState(state);
+      console.log(`guideBooks/${state.department}_guidebook.pdf`);
       dbx
         .filesGetTemporaryLink({
-          path: `/guideBooks/${state.department}_guidebook.pdf`
+          path: `/guideBooks/${state.department}_guidebook.pdf`,
         })
-        .then(data => {
+        .then((data) => {
           state.applink = data.link;
           state.isLoading = false;
           state.error = "";
@@ -40,11 +41,11 @@ class DownloadFundaes extends React.Component {
     return (
       <div className="select-wrapper">
         <br />
-        <Link to="/">
+        <a href="/">
           <Button appearance="subtle" className="back-btn">
             {`<`}
           </Button>
-        </Link>
+        </a>
         <Select
           className="single-select"
           classNamePrefix="react-select"
@@ -64,26 +65,30 @@ class DownloadFundaes extends React.Component {
           <br />
         </a>
         <br />
-        <p className="note" >
-          Note: Events guideBook will be updated soon
-        </p>
-        {!(this.state.applink === "") &&  <Button
-          isLoading={this.state.isLoading}
-          appearance="primary"
-          isDisabled={!this.state.applink}
-          className="download-btn"
-          type="button"
-          onClick={() => {
-            document.getElementById("link").click();
-            this.onChangeHandler("department", "");
-            this.setState(initialState);
-          }}
+
+        {!(this.state.applink === "") && (
+          <Button
+            isLoading={this.state.isLoading}
+            appearance="primary"
+            isDisabled={!this.state.applink}
+            className="download-btn"
+            type="button"
+            onClick={() => {
+              document.getElementById("link").click();
+              this.onChangeHandler("department", "");
+              this.setState(initialState);
+            }}
+          >
+            Download
+          </Button>
+        )}
+        <br />
+        <br />
+        <Banner
+          className="error-banner"
+          appearance="error"
+          isOpen={this.state.error}
         >
-          Download
-        </Button>}
-        <br />
-        <br />
-        <Banner className="error-banner" appearance="error" isOpen={this.state.error}>
           &nbsp;{this.state.error} &nbsp;
         </Banner>
       </div>

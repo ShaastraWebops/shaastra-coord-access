@@ -17,10 +17,10 @@ class UploadApp extends React.Component {
     this.setState(state);
   };
 
-  onChangeHandlerTextField = e => {
+  onChangeHandlerTextField = (e) => {
     e.persist();
     this.setState(() => ({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
 
@@ -28,28 +28,25 @@ class UploadApp extends React.Component {
     const SIZE_LIMIT = 100 * 1024 * 1024;
     if (this.state.application.size < SIZE_LIMIT) {
       const extension = this.state.application.name.split(".").pop();
-      const modifiedName = this.state.name
-        .toLowerCase()
-        .split(" ")
-        .join("_");
+      const modifiedName = this.state.name.toLowerCase().split(" ").join("_");
       this.setState(() => ({ isLoading: true }));
       dbx
         .filesUpload({
           path: `/submitted/${this.state.department}/${this.state.position}/${modifiedName}_${this.state.rollno}_${this.state.secretKey}.${extension}`,
           contents: this.state.application,
-          mode: "overwrite"
+          mode: "overwrite",
         })
-        .then(response => {
+        .then((response) => {
           this.setState(() => ({
             ...initialState,
-            successMsg: "App Submitted"
+            successMsg: "App Submitted",
           }));
         })
-        .catch(err => {
-          console.log(err)
+        .catch((err) => {
+          console.log(err);
           this.setState(() => ({
             ...initialState,
-            error: "Error Uploading App"
+            error: "Error Uploading App",
           }));
         });
     }
@@ -59,11 +56,11 @@ class UploadApp extends React.Component {
     return (
       <React.Fragment>
         <div className="select-wrapper">
-          <Link to="/">
+          <a href="/">
             <Button appearance="subtle" className="back-btn">
               {`<`}
             </Button>
-          </Link>
+          </a>
           <Select
             className="single-select"
             classNamePrefix="react-select"
@@ -115,12 +112,12 @@ class UploadApp extends React.Component {
               maxLength={6}
               onFocus={() => {
                 this.setState(() => ({
-                  dialogOpen: true
+                  dialogOpen: true,
                 }));
               }}
               onBlur={() => {
                 this.setState(() => ({
-                  dialogOpen: false
+                  dialogOpen: false,
                 }));
               }}
             />
@@ -130,9 +127,9 @@ class UploadApp extends React.Component {
             className="upload-file"
             id="file-upload"
             type="file"
-            onChange={e => {
+            onChange={(e) => {
               this.setState({
-                application: e.target.files[0]
+                application: e.target.files[0],
               });
             }}
           />

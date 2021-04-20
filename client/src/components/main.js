@@ -1,26 +1,25 @@
 import React from "react";
 import Button from "@atlaskit/button";
-import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
     <div className="select-wrapper">
-      <Link to="/guideBooks">
+      <a href="/guidebooks">
         <Button appearance="danger" className="download-btn" type="button">
           Download Guide Books
         </Button>
-      </Link>
-      <Link to="/downloadApp">
+      </a>
+      <a href="/downloadApp">
         <Button appearance="primary" className="download-btn" type="button">
           Download App
         </Button>
-      </Link>
+      </a>
       <br />
-      <Link to="/upload">
+      <a href="/upload">
         <Button appearance="warning" className="download-btn" type="button">
           Submit App
         </Button>
-      </Link>
+      </a>
     </div>
   );
 };
