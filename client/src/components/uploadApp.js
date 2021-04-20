@@ -7,7 +7,6 @@ import TextField from "@atlaskit/textfield";
 import { dbx } from "../utils/dbx";
 import { initialState, deptData, appData } from "../utils/data";
 import { Link } from "react-router-dom";
-import { ArrowBack } from "@material-ui/icons";
 
 class UploadApp extends React.Component {
   state = initialState;
@@ -47,6 +46,7 @@ class UploadApp extends React.Component {
           }));
         })
         .catch(err => {
+          console.log(err)
           this.setState(() => ({
             ...initialState,
             error: "Error Uploading App"
@@ -130,7 +130,6 @@ class UploadApp extends React.Component {
             className="upload-file"
             id="file-upload"
             type="file"
-            id="submitApp"
             onChange={e => {
               this.setState({
                 application: e.target.files[0]
