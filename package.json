@@ -2,12 +2,14 @@
   "name": "shaastra-coord",
   "version": "1.0.0",
   "description": "WebApp to download and submit Shaastra coord apps",
+  "homepage": "https://shaastrawebops.github.io/shaastra-coord-access/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "predeploy": "npm run install-client && npm run build",
+    "deploy": "gh-pages -d build"
     "start": "node server.js",
     "client": "cd client && npm start"
   },
