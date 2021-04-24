@@ -34,5 +34,8 @@
   "devDependencies": {
     "react-scripts": "^1.1.1",
     "surge": "^0.20.1"
+  },
+  "engines": {
+    "node": "13.12.0"
   }
 }
