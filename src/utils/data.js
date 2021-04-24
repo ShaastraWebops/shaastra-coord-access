@@ -82,10 +82,10 @@ let appData = {
   evolve: [
     { label: "Spotlight Coordinator", value: "spotlight_coord" },
     { label: "Summit Coordinator", value: "summit_coord" },
-    { label: "UpSkill Coordinator", value: "upSkill_coord" },
+    { label: "Mind Trials Coordinator", value: "mindtrials_coord" },
     { label: "Spotlight Head", value: "spotlight_head" },
     { label: "Summit Head", value: "summit_head" },
-    { label: "UpSkill Head", value: "upSkill_head" },
+    { label: "Mind Trials Head", value: "mindtrials_head" },
   ],
   publicity: [
     { label: "Coordinator", value: "coord" },
