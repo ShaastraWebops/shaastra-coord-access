@@ -91,6 +91,7 @@ let appData = {
     { label: "Coordinator", value: "coord" },
   ],
   events: [
+    { label: "Coordinator", value: "coord" },
     { label: "B Events Head", value: "bEvents_head" },
     { label: "Aerofest Head", value: "aerofest_head" },
     { label: "Workshops Head", value: "workshops_head" },
@@ -102,7 +103,7 @@ let appData = {
   ],
   qms: [
     { label: "Manager", value: "manager" },
-    { label: "Assistant Managere", value: "assistant_manager" },
+    { label: "Assistant Manager", value: "assistant_manager" },
   ],
 };
 
