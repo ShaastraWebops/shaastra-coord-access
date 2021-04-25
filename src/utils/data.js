@@ -89,7 +89,6 @@ let appData = {
   ],
   publicity: [
     { label: "Coordinator", value: "coord" },
-    { label: "Strategist", value: "strategist" },
   ],
   events: [
     { label: "B Events Head", value: "bEvents_head" },
