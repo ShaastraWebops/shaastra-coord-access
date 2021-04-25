@@ -72,12 +72,9 @@ let appData = {
     { label: "Head", value: "head" },
   ],
   spons: [
-    {
-      label: "Engage & Endeavour Coordinator",
-      value: "engage_endeavour_coord",
-    },
-    { label: "Corporate Relations", value: "corporate_relations" },
-    { label: "Public Relations Executive", value: "pr_executive" },
+    { label: "Corporate Relations", value: "cr" },
+    { label: "Public Relations", value: "pr" },
+    { label: "PR Creatives", value: "creatives" },
   ],
   evolve: [
     { label: "Spotlight Coordinator", value: "spotlight_coord" },
@@ -92,14 +89,14 @@ let appData = {
   ],
   events: [
     { label: "Coordinator", value: "coord" },
-    { label: "B Events Head", value: "bEvents_head" },
-    { label: "Aerofest Head", value: "aerofest_head" },
-    { label: "Workshops Head", value: "workshops_head" },
-    { label: "Coding and Logic Head", value: "CandL_head" },
-    { label: "Moot Court Head", value: "moot_court_head" },
-    { label: "Elecfest Head", value: "elecfest_head" },
-    { label: "Involve and Quizzing Head", value: "IandQ_head" },
-    { label: "Design and Build Head", value: "DandB_head" },
+    // { label: "B Events Head", value: "bEvents_head" },
+    // { label: "Aerofest Head", value: "aerofest_head" },
+    // { label: "Workshops Head", value: "workshops_head" },
+    // { label: "Coding and Logic Head", value: "CandL_head" },
+    // { label: "Moot Court Head", value: "moot_court_head" },
+    // { label: "Elecfest Head", value: "elecfest_head" },
+    // { label: "Involve and Quizzing Head", value: "IandQ_head" },
+    // { label: "Design and Build Head", value: "DandB_head" },
   ],
   qms: [
     { label: "Manager", value: "manager" },
